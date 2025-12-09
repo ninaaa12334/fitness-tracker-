@@ -1,0 +1,12 @@
+# Web framework + server
+fastapi>=0.95
+uvicorn[standard]>=0.22
+
+# Frontend
+streamlit>=1.26
+
+# HTTP client
+requests>=2.31
+
+# Optional: type/runtime helpers
+pydantic>=1.10
