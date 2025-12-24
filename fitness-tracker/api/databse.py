@@ -13,7 +13,7 @@ def init_db():
     conn = get_db_connection()
     cursor = conn.cursor()
 
-    # Users Table
+    # Users Table - Updated to include all physical metrics
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -23,7 +23,7 @@ def init_db():
             height REAL,
             weight REAL,
             gender TEXT,
-            goal TEXT  # e.g., 'lose weight', 'gain muscle', 'maintain'
+            goal TEXT
         );
     """)
 
@@ -59,4 +59,4 @@ def init_db():
 
 if __name__ == '__main__':
     init_db()
-    print("Database initialized with 'users', 'workouts', and 'water_intake' tables.")
+    print("Database initialized successfully.")
